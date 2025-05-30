@@ -1,0 +1,9 @@
+services:
+  jekyll:
+    build: .
+    command: jekyll serve --watch --force_polling --livereload
+    volumes:
+      - .:/site # Mount project directory
+    ports:
+      - "4000:4000"
+      - "35729:35729" # LiveReload port
